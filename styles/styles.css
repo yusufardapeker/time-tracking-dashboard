@@ -1,0 +1,206 @@
+body {
+  font: 400 18px "Rubik", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  color: hsl(0, 0%, 100%);
+}
+
+.container {
+  max-width: 1200px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.user-panel .person-info {
+  background-color: hsl(246, 80%, 60%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 32px;
+  border-radius: 12px;
+  position: relative;
+}
+.user-panel .person-info .person-img {
+  width: 70px;
+  border: 3px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+.user-panel .person-info .person-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.user-panel .person-info .person-text-wrapper .person-sub-title {
+  font-size: 16px;
+  color: hsl(236, 100%, 87%);
+}
+.user-panel .person-info .person-text-wrapper .person-name {
+  font-size: 24px;
+  font-weight: 300;
+}
+.user-panel .timeframes {
+  background-color: hsl(235, 46%, 20%);
+  padding: 28px 16px 20px;
+  margin-top: -12px;
+  border-radius: 0 0 12px 12px;
+  display: flex;
+  justify-content: space-around;
+}
+.user-panel .timeframes button {
+  font-family: inherit;
+  font-size: inherit;
+  color: hsl(235, 45%, 61%);
+  transition: color 200ms;
+}
+.user-panel .timeframes button:hover, .user-panel .timeframes button.active {
+  color: hsl(0, 0%, 100%);
+}
+
+.tracking-results {
+  margin-top: 32px;
+}
+.tracking-results .results-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.tracking-results .result-background {
+  padding: 22px;
+  position: relative;
+  z-index: -1;
+  border-radius: 16px 16px 0 0;
+  margin-bottom: -8px;
+  overflow: hidden;
+}
+.tracking-results .result-background.work {
+  background-color: hsl(15, 100%, 70%);
+}
+.tracking-results .result-background.play {
+  background-color: hsl(195, 74%, 62%);
+}
+.tracking-results .result-background.study {
+  background-color: hsl(348, 100%, 68%);
+}
+.tracking-results .result-background.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.tracking-results .result-background.exercise .result-icon {
+  top: 0;
+}
+.tracking-results .result-background.social {
+  background-color: hsl(264, 64%, 52%);
+}
+.tracking-results .result-background.social .result-icon {
+  top: -18px;
+}
+.tracking-results .result-background.self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+.tracking-results .result-background.self-care .result-icon {
+  top: -18px;
+}
+.tracking-results .result-icon {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  width: 76px;
+}
+.tracking-results .result-values {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 12px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background-color 200ms;
+}
+.tracking-results .result-values:hover {
+  cursor: pointer;
+  background-color: hsl(234, 42%, 35%);
+}
+.tracking-results .result-values .result-values-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tracking-results .result-values .result-values-head .result-values-title {
+  font-weight: 400;
+}
+.tracking-results .result-values .result-values-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tracking-results .result-values .result-values-body .result-current-number {
+  font-size: 32px;
+  font-weight: 300;
+}
+.tracking-results .result-values .result-values-body .result-previous {
+  font-size: 15px;
+  color: hsl(236, 100%, 87%);
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    display: flex;
+    gap: 36px;
+  }
+  .container .user-panel .person-info {
+    padding: 28px 28px 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    width: 250px;
+  }
+  .container .user-panel .person-info .person-img {
+    width: 80px;
+  }
+  .container .user-panel .person-info .person-sub-title {
+    font-size: 18px;
+  }
+  .container .user-panel .person-info .person-name {
+    font-size: 40px;
+  }
+  .container .user-panel .timeframes {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 36px 28px 28px;
+  }
+  .container .user-panel .timeframes button {
+    font-size: 20px;
+  }
+  .container .tracking-results {
+    margin-top: unset;
+  }
+  .container .tracking-results .results-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container .tracking-results .results-wrapper .result-item {
+    width: 280px;
+  }
+  .container .tracking-results .result-values .result-values-head .result-values-title {
+    font-size: 20px;
+  }
+  .container .tracking-results .result-values .result-values-body .result-current-number {
+    font-size: 48px;
+  }
+  .container .tracking-results .result-values .result-values-body .result-previous {
+    font-size: 16px;
+  }
+  .container .tracking-results .result-values .result-values-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}/*# sourceMappingURL=styles.css.map */

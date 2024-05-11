@@ -1,0 +1,278 @@
+// Colors
+
+// -- Primary
+$blue: hsl(246, 80%, 60%);
+
+$light-red-work: hsl(15, 100%, 70%);
+$soft-blue: hsl(195, 74%, 62%);
+$light-red-study: hsl(348, 100%, 68%);
+$lime-green: hsl(145, 58%, 55%);
+$violet: hsl(264, 64%, 52%);
+$soft-orange: hsl(43, 84%, 65%);
+
+// -- Neutral
+$very-dark-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+
+$dark-blue-card-hover: hsl(234, 42%, 35%);
+$white: hsl(0, 0%, 100%);
+
+body {
+	font: 400 18px "Rubik", sans-serif;
+	background-color: $very-dark-blue;
+	color: $white;
+}
+
+.container {
+	max-width: 1200px;
+	width: 88%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 48px;
+	margin-bottom: 48px;
+}
+
+.user-panel {
+	.person-info {
+		background-color: $blue;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 32px;
+		border-radius: 12px;
+		position: relative;
+
+		.person-img {
+			width: 70px;
+			border: 3px solid $white;
+			border-radius: 50%;
+		}
+
+		.person-text-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			.person-sub-title {
+				font-size: 16px;
+				color: $pale-blue;
+			}
+
+			.person-name {
+				font-size: 24px;
+				font-weight: 300;
+			}
+		}
+	}
+
+	.timeframes {
+		background-color: $dark-blue;
+		padding: 28px 16px 20px;
+		margin-top: -12px;
+		border-radius: 0 0 12px 12px;
+		display: flex;
+		justify-content: space-around;
+
+		button {
+			font-family: inherit;
+			font-size: inherit;
+			color: $desaturated-blue;
+			transition: color 200ms;
+
+			&:hover,
+			&.active {
+				color: $white;
+			}
+		}
+	}
+}
+
+.tracking-results {
+	margin-top: 32px;
+
+	.results-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	.result-background {
+		padding: 22px;
+		position: relative;
+		z-index: -1;
+		border-radius: 16px 16px 0 0;
+		margin-bottom: -8px;
+		overflow: hidden;
+
+		&.work {
+			background-color: $light-red-work;
+		}
+
+		&.play {
+			background-color: $soft-blue;
+		}
+
+		&.study {
+			background-color: $light-red-study;
+		}
+
+		&.exercise {
+			background-color: $lime-green;
+
+			.result-icon {
+				top: 0;
+			}
+		}
+
+		&.social {
+			background-color: $violet;
+
+			.result-icon {
+				top: -18px;
+			}
+		}
+
+		&.self-care {
+			background-color: $soft-orange;
+
+			.result-icon {
+				top: -18px;
+			}
+		}
+	}
+
+	.result-icon {
+		position: absolute;
+		top: -10px;
+		right: 16px;
+		width: 76px;
+	}
+
+	.result-values {
+		background-color: $dark-blue;
+		border-radius: 12px;
+		padding: 28px 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		transition: background-color 200ms;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $dark-blue-card-hover;
+		}
+
+		.result-values-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.result-values-title {
+				font-weight: 400;
+			}
+		}
+
+		.result-values-body {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.result-current-number {
+				font-size: 32px;
+				font-weight: 300;
+			}
+
+			.result-previous {
+				font-size: 15px;
+				color: $pale-blue;
+			}
+		}
+	}
+}
+
+// Responsive
+@media only screen and (min-width: 1440px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+
+	.container {
+		display: flex;
+		gap: 36px;
+
+		.user-panel {
+			.person-info {
+				padding: 28px 28px 48px;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 28px;
+				width: 250px;
+
+				.person-img {
+					width: 80px;
+				}
+
+				.person-sub-title {
+					font-size: 18px;
+				}
+
+				.person-name {
+					font-size: 40px;
+				}
+			}
+
+			.timeframes {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 16px;
+				padding: 36px 28px 28px;
+
+				button {
+					font-size: 20px;
+				}
+			}
+		}
+
+		.tracking-results {
+			margin-top: unset;
+
+			.results-wrapper {
+				flex-direction: row;
+				flex-wrap: wrap;
+
+				.result-item {
+					width: 280px;
+				}
+			}
+
+			.result-values {
+				.result-values-head {
+					.result-values-title {
+						font-size: 20px;
+					}
+				}
+
+				.result-values-body {
+					.result-current-number {
+						font-size: 48px;
+					}
+					.result-previous {
+						font-size: 16px;
+					}
+				}
+
+				.result-values-body {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 12px;
+				}
+			}
+		}
+	}
+}

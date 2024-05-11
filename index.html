@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+		<link rel="stylesheet" href="./styles/reset.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles/styles.css" />
+
+		<title>Time tracking dashboard</title>
+	</head>
+	<body>
+		<div class="container">
+			<!-- User Panel -->
+			<div class="user-panel">
+				<div class="person-info">
+					<img src="./images/image-jeremy.png" alt="Person Image" class="person-img" />
+					<div class="person-text-wrapper">
+						<div class="person-sub-title">Report for</div>
+						<div class="person-name">Jeremy Robson</div>
+					</div>
+				</div>
+				<div class="timeframes">
+					<button name="daily">Daily</button>
+					<button class="active" name="weekly">Weekly</button>
+					<button name="monthly">Monthly</button>
+				</div>
+			</div>
+
+			<!-- Results -->
+			<div class="tracking-results">
+				<div class="results-wrapper">
+					<div class="result-item">
+						<div class="result-background work">
+							<img src="./images/icon-work.svg" alt="Result Icon" class="result-icon" />
+						</div>
+
+						<div class="result-values">
+							<div class="result-values-head">
+								<h4 class="result-values-title"></h4>
+								<img src="./images/icon-ellipsis.svg" alt="" class="ellipsis-icon" />
+							</div>
+
+							<div class="result-values-body">
+								<span class="result-current-number"></span>
+								<div class="result-previous"></div>
+							</div>
+						</div>
+					</div>
+					<div class="result-item">
+						<div class="result-background play">
+							<img src="./images/icon-play.svg" alt="Result Icon" class="result-icon" />
+						</div>
+
+						<div class="result-values">
+							<div class="result-values-head">
+								<h4 class="result-values-title"></h4>
+								<img src="./images/icon-ellipsis.svg" alt="" class="ellipsis-icon" />
+							</div>
+
+							<div class="result-values-body">
+								<span class="result-current-number"></span>
+								<div class="result-previous"></div>
+							</div>
+						</div>
+					</div>
+					<div class="result-item">
+						<div class="result-background study">
+							<img src="./images/icon-study.svg" alt="Result Icon" class="result-icon" />
+						</div>
+
+						<div class="result-values">
+							<div class="result-values-head">
+								<h4 class="result-values-title"></h4>
+								<img src="./images/icon-ellipsis.svg" alt="" class="ellipsis-icon" />
+							</div>
+
+							<div class="result-values-body">
+								<span class="result-current-number"></span>
+								<div class="result-previous"></div>
+							</div>
+						</div>
+					</div>
+					<div class="result-item">
+						<div class="result-background exercise">
+							<img src="./images/icon-exercise.svg" alt="Result Icon" class="result-icon" />
+						</div>
+
+						<div class="result-values">
+							<div class="result-values-head">
+								<h4 class="result-values-title"></h4>
+								<img src="./images/icon-ellipsis.svg" alt="" class="ellipsis-icon" />
+							</div>
+
+							<div class="result-values-body">
+								<span class="result-current-number"></span>
+								<div class="result-previous"></div>
+							</div>
+						</div>
+					</div>
+					<div class="result-item">
+						<div class="result-background social">
+							<img src="./images/icon-social.svg" alt="Result Icon" class="result-icon" />
+						</div>
+
+						<div class="result-values">
+							<div class="result-values-head">
+								<h4 class="result-values-title"></h4>
+								<img src="./images/icon-ellipsis.svg" alt="" class="ellipsis-icon" />
+							</div>
+
+							<div class="result-values-body">
+								<span class="result-current-number"></span>
+								<div class="result-previous"></div>
+							</div>
+						</div>
+					</div>
+					<div class="result-item">
+						<div class="result-background self-care">
+							<img src="./images/icon-self-care.svg" alt="Result Icon" class="result-icon" />
+						</div>
+
+						<div class="result-values">
+							<div class="result-values-head">
+								<h4 class="result-values-title"></h4>
+								<img src="./images/icon-ellipsis.svg" alt="" class="ellipsis-icon" />
+							</div>
+
+							<div class="result-values-body">
+								<span class="result-current-number"></span>
+								<div class="result-previous"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
