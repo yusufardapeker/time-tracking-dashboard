@@ -10,11 +10,17 @@ async function displayData() {
 	const res = await fetch("./data.json");
 	const data = await res.json();
 
-	resultItems.forEach((item, index) => {
-		resultTitle[index].textContent = data[index].title;
-		resultCurrentValue[index].innerText = `${data[index].timeframes.weekly.current}hrs`;
-		resultPrevious[index].innerText = `Last Week - ${data[index].timeframes.weekly.previous}hrs`;
-	});
+	const renderInUI = (timeframe, prevWord) => {
+		resultItems.forEach((item, index) => {
+			resultTitle[index].textContent = data[index].title;
+			resultCurrentValue[index].innerText = `${data[index].timeframes[timeframe].current}hrs`;
+			resultPrevious[
+				index
+			].innerText = `${prevWord} - ${data[index].timeframes[timeframe].previous}hrs`;
+		});
+	};
+
+	renderInUI("weekly", "Last Week");
 
 	buttons.forEach((button, index, array) =>
 		button.addEventListener("click", (e) => {
@@ -26,30 +32,21 @@ async function displayData() {
 				case "daily":
 					e.target.classList.add("active");
 
-					resultItems.forEach((item, index) => {
-						resultCurrentValue[index].innerText = `${data[index].timeframes.daily.current}hrs`;
-						resultPrevious[index].innerText = `Yesterday - ${data[index].timeframes.daily.previous}hrs`;
-					});
+					renderInUI("daily", "Yesterday");
 
 					break;
 
 				case "monthly":
 					e.target.classList.add("active");
 
-					resultItems.forEach((item, index) => {
-						resultCurrentValue[index].innerText = `${data[index].timeframes.monthly.current}hrs`;
-						resultPrevious[index].innerText = `Last Month - ${data[index].timeframes.monthly.previous}hrs`;
-					});
+					renderInUI("monthly", "Last Month");
 
 					break;
 
 				default:
 					e.target.classList.add("active");
 
-					resultItems.forEach((item, index) => {
-						resultCurrentValue[index].innerText = `${data[index].timeframes.weekly.current}hrs`;
-						resultPrevious[index].innerText = `Last Week - ${data[index].timeframes.weekly.previous}hrs`;
-					});
+					renderInUI("weekly", "Last Week");
 
 					break;
 			}
