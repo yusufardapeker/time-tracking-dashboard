@@ -1,5 +1,123 @@
 body {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  background-color: hsl(226, 43%, 10%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1200px;
+  width: 88%;
+  margin: 48px auto;
+}
+
+.user-panel .user-info {
+  background-color: hsl(246, 80%, 60%);
+  padding: 32px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+.user-panel .user-info .user-img {
+  width: 70px;
+  border: 3px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+.user-panel .user-info .user-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.user-panel .user-info .user-text-content p:first-child {
+  font-size: 16px;
+  color: hsl(236, 100%, 87%);
+}
+.user-panel .user-info .user-text-content .user-name {
+  font-size: 24px;
+  font-weight: 300;
+}
+.user-panel .timeframes {
+  background-color: hsl(235, 46%, 20%);
+  padding: 28px 0 20px;
+  margin-top: -8px;
+  border-radius: 0 0 12px 12px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tracking-results {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.tracking-results .result-item .result-background {
+  padding: 22px;
+  position: relative;
+  z-index: -1;
+  border-radius: 16px 16px 0 0;
+  margin-bottom: -8px;
+  overflow: hidden;
+}
+.tracking-results .result-item .result-background.work {
+  background-color: hsl(15, 100%, 70%);
+}
+.tracking-results .result-item .result-background.play {
+  background-color: hsl(195, 74%, 62%);
+}
+.tracking-results .result-item .result-background.study {
+  background-color: hsl(348, 100%, 68%);
+}
+.tracking-results .result-item .result-background.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.tracking-results .result-item .result-background.exercise .result-icon {
+  top: 0;
+}
+.tracking-results .result-item .result-background.social {
+  background-color: hsl(264, 64%, 52%);
+}
+.tracking-results .result-item .result-background.social .result-icon {
+  top: -18px;
+}
+.tracking-results .result-item .result-background.self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+.tracking-results .result-item .result-background.self-care .result-icon {
+  top: -18px;
+}
+.tracking-results .result-item .result-background .result-icon {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  width: 76px;
+}
+.tracking-results .result-item .result-values {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 12px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.tracking-results .result-item .result-values .result-values-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tracking-results .result-item .result-values .result-values-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tracking-results .result-item .result-values .result-values-body .result-current {
+  font-size: 32px;
+  font-weight: 300;
+}
+.tracking-results .result-item .result-values .result-values-body .result-previous {
+  font-size: 15px;
+  color: hsl(236, 100%, 87%);
 }/*# sourceMappingURL=main.css.map */
