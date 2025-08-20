@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1100px;
 	width: 88%;
 	margin: 48px auto;
 }
@@ -77,8 +77,13 @@ body {
 		justify-content: space-around;
 		color: $desaturated-blue;
 
-		button.active {
-			color: $white;
+		button {
+			transition: color 200ms ease-in;
+
+			&:hover,
+			&.active {
+				color: $white;
+			}
 		}
 	}
 }
@@ -90,6 +95,8 @@ body {
 	gap: 32px;
 
 	.result-item {
+		cursor: pointer;
+
 		.result-background {
 			padding: 22px;
 			position: relative;
@@ -149,6 +156,11 @@ body {
 			display: flex;
 			flex-direction: column;
 			gap: 12px;
+			transition: background-color 200ms ease-in;
+
+			&:hover {
+				background-color: $blue;
+			}
 
 			.result-values-head {
 				display: flex;
@@ -169,6 +181,97 @@ body {
 				.result-previous {
 					font-size: 15px;
 					color: $pale-blue;
+				}
+			}
+		}
+	}
+}
+
+@media (width > 376px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	}
+
+	.container {
+		display: flex;
+		gap: 36px;
+	}
+
+	.user-panel {
+		width: 250px;
+
+		.user-info {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 40px;
+			padding: 32px 32px 72px;
+
+			.user-img {
+				width: 80px;
+			}
+
+			.user-text-content {
+				p:first-child {
+					font-size: 18px;
+				}
+
+				.user-name {
+					font-size: 36px;
+				}
+			}
+		}
+
+		.timeframes {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+			justify-content: unset;
+			padding: 28px 32px;
+
+			button {
+				font-size: 20px;
+			}
+		}
+	}
+
+	.tracking-results {
+		margin-top: unset;
+		flex-wrap: wrap;
+		flex: 1;
+		flex-direction: row;
+
+		.result-item {
+			width: 250px;
+
+			.result-background {
+				padding: 26px;
+			}
+
+			.result-values {
+				gap: 20px;
+
+				.result-values-head {
+					.result-values-title {
+						font-size: 20px;
+					}
+				}
+
+				.result-values-body {
+					display: flex;
+					justify-content: unset;
+					align-items: unset;
+					flex-direction: column;
+					gap: 8px;
+
+					.result-current {
+						font-size: 48px;
+					}
+					.result-previous {
+						font-size: 16px;
+					}
 				}
 			}
 		}
