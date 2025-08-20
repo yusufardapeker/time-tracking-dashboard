@@ -75,6 +75,11 @@ body {
 		border-radius: 0 0 12px 12px;
 		display: flex;
 		justify-content: space-around;
+		color: $desaturated-blue;
+
+		button.active {
+			color: $white;
+		}
 	}
 }
 

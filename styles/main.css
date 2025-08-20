@@ -46,6 +46,10 @@ body {
   border-radius: 0 0 12px 12px;
   display: flex;
   justify-content: space-around;
+  color: hsl(235, 45%, 61%);
+}
+.user-panel .timeframes button.active {
+  color: hsl(0, 0%, 100%);
 }
 
 .tracking-results {
