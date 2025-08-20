@@ -4,6 +4,8 @@
 
 This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
 
+Live Site URL: [The Website](https://time-tracking-dashboard5.netlify.app/)
+
 ### Built with
 
 - SASS
