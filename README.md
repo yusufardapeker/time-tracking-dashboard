@@ -11,6 +11,8 @@ Live Site URL: [The Website](https://time-tracking-dashboard5.netlify.app/)
 - SASS
 - Mobile-first workflow
 
+### About The Project
+
 I don't have the figma file so it is not pixel perfect. I have tried to make similar as same as possible. The website is responsive only 1440px and 375px screen sizes.
 
 ### How to get this repository to your local computer?
@@ -20,6 +22,6 @@ I don't have the figma file so it is not pixel perfect. I have tried to make sim
 
 - `git clone https://github.com/yusufardapeker/time-tracking-dashboard.git`
 
-- Paste this code to navigate into the project `cd chat-app-css-illustration`
+- Paste this code to navigate into the project `cd time-tracking-dashboard`
 
 - Use _Live Server_ extension for running the site with your browser if you use Visual Studio Code.
