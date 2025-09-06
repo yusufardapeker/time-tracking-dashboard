@@ -6,9 +6,13 @@ const resultPrevious = document.querySelectorAll(".result-previous");
 
 const buttons = document.querySelectorAll("button");
 
+let data = null;
+
 const getData = async () => {
-	const res = await fetch("./data.json");
-	const data = await res.json();
+	if (!data) {
+		const res = await fetch("./data.json");
+		data = await res.json();
+	}
 
 	return data;
 };
