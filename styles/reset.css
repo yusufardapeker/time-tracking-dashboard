@@ -11,17 +11,7 @@
 a,
 a:link,
 a:visited {
-	color: inherit;
 	text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font: inherit;
 	color: inherit;
 }
 
@@ -39,11 +29,8 @@ svg {
 	max-width: 100%;
 }
 
-button {
+label {
 	cursor: pointer;
-	background-color: transparent;
-	font: inherit;
-	color: inherit;
 }
 
 input,
@@ -51,4 +38,7 @@ button,
 textarea,
 select {
 	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
 }
