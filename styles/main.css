@@ -1,75 +1,95 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   background-color: hsl(226, 43%, 10%);
   color: hsl(0, 0%, 100%);
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 1100px;
-  width: 88%;
-  margin: 48px auto;
+  width: min(110rem, 88%);
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
 }
 
 .user-panel .user-info {
   background-color: hsl(246, 80%, 60%);
-  padding: 32px;
+  padding: 3.2rem;
   border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: clamp(1.6rem, 1.4rem + 1.4vw, 4rem);
   position: relative;
+  z-index: 1;
 }
 .user-panel .user-info .user-img {
-  width: 70px;
+  width: 7rem;
   border: 3px solid hsl(0, 0%, 100%);
   border-radius: 50%;
 }
 .user-panel .user-info .user-text-content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.4rem;
 }
-.user-panel .user-info .user-text-content p:first-child {
-  font-size: 16px;
+.user-panel .user-info .user-text-content .report-for-text {
+  font-size: 1.6rem;
   color: hsl(236, 100%, 87%);
 }
 .user-panel .user-info .user-text-content .user-name {
-  font-size: 24px;
+  font-size: clamp(2.4rem, 1.5rem + 1.5vw, 3.6rem);
   font-weight: 300;
+  color: hsl(0, 0%, 100%);
 }
 .user-panel .timeframes {
   background-color: hsl(235, 46%, 20%);
-  padding: 28px 0 20px;
-  margin-top: -8px;
+  padding: 2.8rem 2rem 2rem;
+  margin-top: -0.8rem;
   border-radius: 0 0 12px 12px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   color: hsl(235, 45%, 61%);
 }
-.user-panel .timeframes button {
+.user-panel .timeframes button[data-timeframe] {
   transition: color 200ms ease-in;
+  padding: 0.4rem;
 }
-.user-panel .timeframes button:hover, .user-panel .timeframes button.active {
+.user-panel .timeframes button[data-timeframe]:hover, .user-panel .timeframes button[data-timeframe].active {
   color: hsl(0, 0%, 100%);
+}
+.user-panel .timeframes button[data-timeframe]:focus-visible {
+  color: hsl(0, 0%, 100%);
+  outline: 2px solid hsl(0, 0%, 100%);
+  border-radius: 8px;
 }
 
 .tracking-results {
-  margin-top: 32px;
+  margin-top: 3.2rem;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 3.2rem;
 }
 .tracking-results .result-item {
   cursor: pointer;
 }
+.tracking-results .result-item:focus-visible {
+  outline: 2px solid hsl(0, 0%, 100%);
+  border-radius: 16px;
+}
 .tracking-results .result-item .result-background {
-  padding: 22px;
+  padding: 2.2rem;
   position: relative;
   z-index: -1;
   border-radius: 16px 16px 0 0;
-  margin-bottom: -8px;
+  margin-bottom: -0.8rem;
   overflow: hidden;
 }
 .tracking-results .result-item .result-background.work {
@@ -101,20 +121,20 @@ body {
 }
 .tracking-results .result-item .result-background .result-icon {
   position: absolute;
-  top: -10px;
-  right: 16px;
-  width: 76px;
+  top: -1rem;
+  right: 1.6rem;
+  width: 7.6rem;
 }
 .tracking-results .result-item .result-values {
   background-color: hsl(235, 46%, 20%);
   border-radius: 12px;
-  padding: 28px 24px;
+  padding: 2.8rem 2.4rem;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: clamp(1.2rem, 0.8rem + 0.8vw, 2rem);
   transition: background-color 200ms ease-in;
 }
-.tracking-results .result-item .result-values:hover {
+.tracking-results .result-item .result-values:hover:not(:has(.more-options-button:hover)) {
   background-color: hsl(246, 80%, 60%);
 }
 .tracking-results .result-item .result-values .result-values-head {
@@ -122,88 +142,88 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.tracking-results .result-item .result-values .result-values-head .more-options-button {
+  padding: 0.4rem;
+}
+.tracking-results .result-item .result-values .result-values-head .more-options-button:focus-visible {
+  color: hsl(0, 0%, 100%);
+  outline: 2px solid hsl(0, 0%, 100%);
+  border-radius: 8px;
+}
 .tracking-results .result-item .result-values .result-values-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .tracking-results .result-item .result-values .result-values-body .result-current {
-  font-size: 32px;
+  font-size: clamp(3.2rem, 2rem + 2vw, 4.8rem);
   font-weight: 300;
 }
 .tracking-results .result-item .result-values .result-values-body .result-previous {
-  font-size: 15px;
+  font-size: 1.5rem;
   color: hsl(236, 100%, 87%);
 }
 
-@media (width > 376px) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  .container {
-    display: flex;
-    gap: 36px;
-  }
-  .user-panel {
-    width: 250px;
-  }
-  .user-panel .user-info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 32px 32px 72px;
-  }
-  .user-panel .user-info .user-img {
-    width: 80px;
-  }
-  .user-panel .user-info .user-text-content p:first-child {
-    font-size: 18px;
-  }
-  .user-panel .user-info .user-text-content .user-name {
-    font-size: 36px;
-  }
+@media (width > 576px) {
   .user-panel .timeframes {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    justify-content: unset;
-    padding: 28px 32px;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2.8rem 3.2rem 2rem;
   }
-  .user-panel .timeframes button {
-    font-size: 20px;
+  .user-panel .timeframes button[data-timeframe] {
+    font-size: 2rem;
   }
   .tracking-results {
-    margin-top: unset;
     flex-wrap: wrap;
     flex: 1;
     flex-direction: row;
+    justify-content: center;
+    margin-top: 4rem;
   }
   .tracking-results .result-item {
-    width: 250px;
+    width: 24rem;
   }
   .tracking-results .result-item .result-background {
-    padding: 26px;
-  }
-  .tracking-results .result-item .result-values {
-    gap: 20px;
+    padding: 2.6rem;
   }
   .tracking-results .result-item .result-values .result-values-head .result-values-title {
-    font-size: 20px;
+    font-size: 2rem;
   }
   .tracking-results .result-item .result-values .result-values-body {
     display: flex;
     justify-content: unset;
-    align-items: unset;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.8rem;
   }
-  .tracking-results .result-item .result-values .result-values-body .result-current {
-    font-size: 48px;
+}
+@media (width > 992px) {
+  .container {
+    display: flex;
+    gap: 3.6rem;
   }
-  .tracking-results .result-item .result-values .result-values-body .result-previous {
-    font-size: 16px;
+  .user-panel {
+    max-width: 25rem;
+  }
+  .user-panel .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3.2rem 3.2rem 7.2rem;
+  }
+  .user-panel .user-info .user-img {
+    width: 8rem;
+  }
+  .user-panel .timeframes {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    justify-content: unset;
+    padding: 2.8rem 3.2rem 2rem;
+  }
+  .tracking-results {
+    margin-top: unset;
+  }
+  .tracking-results .result-item {
+    width: 25rem;
   }
 }/*# sourceMappingURL=main.css.map */
